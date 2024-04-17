@@ -1,12 +1,9 @@
 package com.binarytreegenerator;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 class BinaryTree {
   LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
-  List<Integer> list = new ArrayList<Integer>();
   private TreeNode root = new TreeNode();
   Object[] rawData = new Object[] {};
 
@@ -38,23 +35,10 @@ class BinaryTree {
           } else if (2 * i + 2 - x < rawData.length && rawData[2 * i + 2 - x] == null) {
             node.right = null;
           }
-        } else {
-          x += 2;
-        }
+        } else { x += 2; }
         i++;
       }
     }
-    else{
-      root.left = null;
-    }
-  }
-
-  public List<Integer> inorderTraversal(TreeNode root) {
-    if(root != null){
-      inorderTraversal(root.left);
-      this.list.add(root.val);
-      inorderTraversal(root.right);
-    }
-    return list;
+    else{ root.left = null; }
   }
 }
