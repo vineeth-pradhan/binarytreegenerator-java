@@ -4,15 +4,13 @@ import java.util.LinkedList;
 import com.binarytreegenerator.TreeNode;
 
 public class BinaryTree {
-  LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
+  BinaryTree(Object[] rawData){this.rawData = rawData; construct(); }
   private TreeNode root = new TreeNode();
+  LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
   Object[] rawData = new Object[] {};
 
-  BinaryTree(Object[] rawData){this.rawData = rawData; construct(); }
 
-  public TreeNode getRoot() {
-    return root.left;
-  }
+  public TreeNode getRoot() { return root.left; }
 
   public void construct() {
     int x = 0, i = 0;
