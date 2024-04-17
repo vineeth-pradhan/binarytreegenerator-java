@@ -4,8 +4,8 @@ import java.util.LinkedList;
 import com.binarytreegenerator.TreeNode;
 
 public class BinaryTree {
-  BinaryTree(Object[] rawData){this.rawData = rawData; construct(); }
-  private TreeNode root = new TreeNode();
+  public BinaryTree(Object[] rawData){this.rawData = rawData; construct(); }
+  TreeNode root = new TreeNode();
   LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
   Object[] rawData = new Object[] {};
 
