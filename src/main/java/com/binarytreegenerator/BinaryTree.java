@@ -1,8 +1,9 @@
 package com.binarytreegenerator;
 
 import java.util.LinkedList;
+import com.binarytreegenerator.TreeNode;
 
-class BinaryTree {
+public class BinaryTree {
   LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
   private TreeNode root = new TreeNode();
   Object[] rawData = new Object[] {};
