@@ -7,10 +7,14 @@ import java.util.List;
 class BinaryTree {
   LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
   List<Integer> list = new ArrayList<Integer>();
-  TreeNode root = new TreeNode();
+  private TreeNode root = new TreeNode();
   Object[] rawData = new Object[] {};
 
   BinaryTree(Object[] rawData){this.rawData = rawData; construct(); }
+
+  public TreeNode getRoot() {
+    return root.left;
+  }
 
   public void construct() {
     int x = 0, i = 0;
