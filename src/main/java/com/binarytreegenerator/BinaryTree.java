@@ -43,11 +43,9 @@ class BinaryTree {
         }
         i++;
       }
-      System.out.println(inorderTraversal(root.left));
     }
     else{
       root.left = null;
-      System.out.println(inorderTraversal(root.left));
     }
   }
 
