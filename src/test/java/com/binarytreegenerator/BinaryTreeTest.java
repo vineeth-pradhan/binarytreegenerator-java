@@ -10,12 +10,18 @@ class BinaryTreeTest {
   List<Integer> list = new ArrayList<Integer>();
 
   public List<Integer> inorderTraversal(TreeNode root) {
-    if(root != null){
+    if (root != null) {
       inorderTraversal(root.left);
       this.list.add(root.val);
       inorderTraversal(root.right);
     }
     return list;
+  }
+
+  @Test
+  public void testZeroTree(){
+    BinaryTree tree = new BinaryTree(new Object[] { });
+    assertArrayEquals(inorderTraversal(tree.getRoot()).toArray(), new Object[] { });
   }
 
   @Test

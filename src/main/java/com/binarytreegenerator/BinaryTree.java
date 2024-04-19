@@ -1,7 +1,6 @@
 package com.binarytreegenerator;
 
 import java.util.LinkedList;
-import com.binarytreegenerator.TreeNode;
 
 public class BinaryTree {
   public BinaryTree(Object[] rawData){this.rawData = rawData; construct(); }
@@ -9,10 +8,10 @@ public class BinaryTree {
   LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
   Object[] rawData = new Object[] {};
 
-
   public TreeNode getRoot() { return root.left; }
 
   public void construct() {
+
     int x = 0, i = 0;
     if(rawData.length > 0){
       root.left = new TreeNode();
